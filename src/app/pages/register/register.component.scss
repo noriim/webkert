@@ -1,0 +1,16 @@
+$h1_margin: 100px;
+$button_margin: 20px;
+
+div {
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  margin: $h1_margin;
+}
+
+button {
+  margin: $button_margin;
+}

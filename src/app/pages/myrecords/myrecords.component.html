@@ -1,0 +1,22 @@
+<div class="main_component">
+  <h1>Eddigi diktálásaim</h1>
+  <h1 *ngIf="recordNumber === 0">Önnek nincs eddigi diktálása!</h1>
+  <table *ngIf="recordNumber">
+    <tr>
+      <th>Számlázási mód</th>
+      <th>Dátum</th>
+      <th>Mérőállás</th>
+      <th>Műveletek</th>
+    </tr>
+    <tr *ngFor="let record of records; let i = index;" [ngClass]="i % 2 === 0 ? 'table-header-even' :
+    'table-header-odd'">
+      <td>{{record.type}}</td>
+      <td>{{record.date}}</td>
+      <td class="td_desc">{{record.record}}</td>
+      <td><button mat-raised-button color="primary" (click)="toUrgent(record)">Hiba bejelentése</button>
+        <button mat-raised-button color="primary" (click)="delete(record)">Törlés</button></td>
+    </tr>
+  </table>
+  <br/><br/>
+  <button mat-raised-button color="primary" (click)="backToHome()">Vissza</button>
+</div>

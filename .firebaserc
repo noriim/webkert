@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webkert-electricity-record": {
+      "hosting": {
+        "electricity-record": [
+          "webkert-electricity-record"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webkert-electricity-record"
+  }
+}

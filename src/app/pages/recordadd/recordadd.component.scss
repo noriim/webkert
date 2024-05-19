@@ -1,0 +1,26 @@
+$formContentMargin: 10px;
+$h1_margin: 100px;
+
+
+div {
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.main_component {
+  height: 100vh;
+  align-items: center;
+}
+
+h1 {
+  margin: $h1_margin;
+}
+
+input {
+  margin: $formContentMargin;
+}
+
+button {
+  margin: $formContentMargin;
+}

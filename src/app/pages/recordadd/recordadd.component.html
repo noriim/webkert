@@ -1,0 +1,33 @@
+<div class="main_component">
+  <h1>Diktálás</h1>
+  <form [formGroup]="recordForm">
+    <mat-form-field>
+      <mat-label>Számlázási mód: </mat-label>
+      <mat-select formControlName="type" id="type_selector" [(ngModel)]="chosenType">
+        <mat-option *ngFor="let type of typeList" [value]="type">{{ type }}</mat-option>
+      </mat-select>
+    </mat-form-field> <br/><br/>
+
+    <mat-form-field>
+      <mat-label>Válasszon dátumot és időt!</mat-label>
+      <input matInput formControlName="date" [matDatepicker]="picker1" required>
+      <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker1></mat-datepicker>
+
+      <input matInput formControlName="time" [ngxMatTimepicker]="picker2" [format]="24" required>
+      <ngx-mat-timepicker-toggle matIconSuffix [for]="picker2"></ngx-mat-timepicker-toggle>
+      <ngx-mat-timepicker #picker2></ngx-mat-timepicker>
+
+    </mat-form-field> <br/><br/>
+
+    <mat-form-field>
+      <mat-label>Mérőállás</mat-label>
+      <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1"
+                cdkAutosizeMaxRows="10" formControlName="record"
+                placeholder="Itt adja meg mérőállását!" required></textarea>
+    </mat-form-field> <br/><br/>
+
+    <button mat-raised-button color="primary" (click)="addRecord()">Diktálás</button> <br/><br/>
+    <button mat-raised-button color="primary" (click)="backToHome()">Vissza</button>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+<mat-nav-list>
+    <a *ngIf="!(loggedInUser)" mat-list-item [routerLink]="'/login'" (click)="close()">
+      <mat-icon>login</mat-icon>
+      <span>Bejelentkezés</span>
+    </a>
+    <a *ngIf="!(loggedInUser)" mat-list-item [routerLink]="'/register'" (click)="close()">
+      <mat-icon>app_registration</mat-icon>
+      <span>Regisztráció</span>
+    </a>
+    <a *ngIf="(loggedInUser)" mat-list-item [routerLink]="'/home'" (click)="close()">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </a>
+    <a *ngIf="(loggedInUser)" mat-list-item [routerLink]="'/recordadd'" (click)="close()">
+      <mat-icon>calendar_month</mat-icon>
+      <span>Diktálás</span>
+    </a>
+    <a *ngIf="(loggedInUser)" mat-list-item [routerLink]="'/myrecords'" (click)="close()">
+      <mat-icon>edit_calendar</mat-icon>
+      <span>Eddigi diktálásaim</span>
+    </a>
+    <a mat-list-item [routerLink]="'/contacts'" (click)="close()">
+      <mat-icon>phone_in_talk</mat-icon>
+      <span>Elérhetőségek</span>
+    </a>
+</mat-nav-list>

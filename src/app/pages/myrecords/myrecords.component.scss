@@ -1,0 +1,44 @@
+$h1_margin: 100px;
+
+div {
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.main_component {
+  height: 100vh;
+  align-items: center;
+}
+
+h1 {
+  margin: $h1_margin;
+}
+
+table {
+  width:70%;
+  margin-left:15%;
+  margin-right:15%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td > button {
+  margin: 5px;
+}
+
+.table-header-even {
+  background-color: deeppink;
+}
+
+.table-header-odd {
+  background-color: mediumblue;
+}
+
+@media only screen and (max-width: 700px) {
+  .td_desc {
+    word-break: break-word;
+  }
+}
